@@ -11,7 +11,7 @@ class UpdateContactRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,11 @@ class UpdateContactRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => ["required", "string", "regex:/[a-zA-z.']/", "not_regex:/[0-9(@)|,:;(\-)_<>+(\/)]/"],
+            'direction' => ["required", "string", "regex:/[a-zA-Z0-9.-\/]/"],
+            'phone' => ["required", "string", "regex:/[0-9]/", "not_regex:/[a-zA-Z.(\-)_(\/)]/"],
+            'email' => ["required", "string", "email"],
+            'photo' => ["image"]
         ];
     }
 }

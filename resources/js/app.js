@@ -1,3 +1,4 @@
+import './custom/toggleUpdateImage';
 import './bootstrap';
 
 import Alpine from 'alpinejs';

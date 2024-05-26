@@ -56,9 +56,12 @@
                         @enderror
                     </fieldset>
                     <fieldset class="flex justify-center p-2 mt-6">
-                        <button type="submit" id="submit" name="submit" class="bd-gray-800 dark:bg-gray-200 px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-700 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus-bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150 inline">
+                        <button type="submit" id="submit" name="submit" class="bg-gray-800 dark:bg-gray-200 px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-700 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus-bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150 inline mr-2">
                             Crear
                         </button>
+                        <a class="bg-gray-600 dark:bg-gray-700 text-white font-semibold p-4 rounded-md ml-2" href="{{ route('contacts.index') }}">
+                            Volver
+                        </a>
                     </fieldset>
                 </form>
             </div>

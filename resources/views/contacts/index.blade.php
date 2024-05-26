@@ -14,7 +14,7 @@
             <article class="p-3 m-2">
                 <form class="flex flex-row-reverse" action="{{ route('contacts.create') }}" method="GET">
                     @csrf
-                    <button type="submit" class="bd-gray-800 dark:bg-gray-200 px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-700 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus-bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">
+                    <button type="submit" class="bg-gray-800 dark:bg-gray-200 px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-700 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus-bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">
                         Agregar
                     </button>
                 </form>
@@ -46,9 +46,8 @@
                                     @csrf
                                     <button type="submit" class="text-white font-semibold uppercase mx-3 p-4 bg-cyan-500 dark:bg-zinc-600 rounded-md">Ver</button>
                                 </form>
-                                <form action="{{ route('contacts.edit', ['contact' => $contact]) }}" method="POST" class="self-center">
+                                <form action="{{ route('contacts.edit', ['contact' => $contact]) }}" class="self-center">
                                     @csrf
-                                    @method('PUT')
                                     <button class="text-white font-semibold uppercase mx-3 p-4 bg-amber-500 dark:bg-amber-700 rounded-md">Editar</button>
                                 </form>
                                 <form action="{{ route('contacts.destroy', ['contact' => $contact]) }}" method="POST" class="self-center">
